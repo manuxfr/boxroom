@@ -1,0 +1,402 @@
+# FR French translations for Ruby on Rails
+#
+# Use this as the base for the locale file of your language.
+# see: https://github.com/svenfuchs/rails-i18n/blob/master/rails/locale/en-US.yml
+
+"fr":
+  date:
+    formats:
+      default: "%d-%m-%Y"
+      short: "%b %d"
+      long: "%B %d, %Y"
+
+    day_names: [Dimanche, Lundi, Mardi, Mercredi, Jeudi, Vendredi, Samedi]
+    abbr_day_names: [Dim, Lun, Mar, Mer, Jeu, Ven, Sam]
+
+    month_names: [~, Janvier, Fevrier, Mars, Avril, Mai, Juin, Juillet, Aout, Septembre, Octobre, Novembre, Decembre]
+    abbr_month_names: [~, Jan, Fev, Mar, Avr, Mai, Jui, Jui, Aou, Sep, Oct, Nov, Dec]
+    order:
+      - :année
+      - :mois
+      - :jour
+
+  time:
+    formats:
+      default: "%a, %d %b %Y %H:%M:%S %z"
+      short: "%d %b %Y %H:%M"
+      very_short: "%d %b %Y"
+      long: "%B %d, %Y %H:%M"
+      date_only: "%d %B %Y"
+      time_only: "%H:%M"
+    am: "am"
+    pm: "pm"
+
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: " et "
+      last_word_connector: ", et "
+
+    select:
+      prompt: "Selectionner"
+
+  number:
+    format:
+      separator: ","
+      delimiter: " "
+      precision: 3
+      significant: false
+      strip_insignificant_zeros: false
+
+    currency:
+      format:
+        format: "%u%n"
+        unit: "€"
+        separator: ","
+        delimiter: " "
+        precision: 2
+        significant: false
+        strip_insignificant_zeros: false
+
+    percentage:
+      format:
+        delimiter: ""
+
+    precision:
+      format:
+        delimiter: ""
+
+    human:
+      format:
+        delimiter: ""
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: "Octet"
+            other: "Octets"
+          kb: "Ko"
+          mb: "Mo"
+          gb: "Go"
+          tb: "To"
+      decimal_units:
+        format: "%n %u"
+        units:
+          unit: ""
+          thousand: Mille
+          million: Million
+          billion: Milliard
+          trillion: Billion
+          quadrillion: Quadrillion
+
+  datetime:
+    distance_in_words:
+      half_a_minute: "une demi-minute"
+      less_than_x_seconds:
+        one: "moins d'une seconde"
+        other: "moins de %{count} secondes"
+      x_seconds:
+        one: "1 seconde"
+        other: "%{count} secondes"
+      less_than_x_minutes:
+        one: "moins d'une minute"
+        other: "moins de %{count} minutes"
+      x_minutes:
+        one: "1 minute"
+        other: "%{count} minutes"
+      about_x_hours:
+        one: "environ 1 heure"
+        other: "environ %{count} heures"
+      x_days:
+        one: "1 jour"
+        other: "%{count} jours"
+      about_x_months:
+        one: "environ 1 mois"
+        other: "environ %{count} mois"
+      x_months:
+        one: "1 mois"
+        other: "%{count} mois"
+      about_x_years:
+        one: "environ 1 an"
+        other: "environ %{count} ans"
+      over_x_years:
+        one: "plus d'1 an"
+        other: "plus %{count} ans"
+      almost_x_years:
+        one: "presque 1 an"
+        other: "presque %{count} ans"
+    prompts:
+      year: "Annéee"
+      month: "Mois"
+      day: "Jour"
+      hour: "Heure"
+      minute: "Minute"
+      second: "Seconde"
+
+
+  helpers:
+    select:
+      prompt: "Sélectionner"
+
+    submit:
+      create: 'Créer %{model}'
+      update: 'Mettre à jour %{model}'
+      submit: 'Sauvegarder %{model}'
+
+  errors:
+    format: "%{attribut} %{message}"
+
+    messages: &errors_messages
+      inclusion: "n'est pas inclus dans la liste"
+      exclusion: "est réservé"
+      invalid: "est invalide"
+      confirmation: "ne correspond pas à la confirmation"
+      accepted: "doit être accepté"
+      empty: "ne peut pas être vide"
+      blank: "ne peut pas être vierge"
+      exists_already: 'existe déjà'
+      too_long: "est trop long (maximum de %{count} charactères)"
+      too_short: "est trop court (minimum de %{count} charactères)"
+      wrong_length: "n'est pas de la bonne longueur (devrait être de %{count} charactères)"
+      not_a_number: "n'est pas un nombre"
+      not_an_integer: "doit être un nombre entier"
+      greater_than: "doit être supérieur à %{count}"
+      greater_than_or_equal_to: "doit être supérieur à ou égal à %{count}"
+      equal_to: "doit être égal à %{count}"
+      less_than: "doit être inférieur à %{count}"
+      less_than_or_equal_to: "doit être inférieur à ou égal à %{count}"
+      odd: "doit être impair"
+      even: "doit être pair"
+      invalid_characters: 'ne peut contenir aucun de ces caractères: < > : " / \ | ? *'
+
+  activerecord:
+    errors:
+      template:
+        header:
+          one: "1 erreur interdit le %{model} d'être sauvegardé"
+          other: "%{count} erreurs interdisent le %{model} d'être sauvegardé"
+        body: "Il ya eu des problèmes avec les champs suivants:"
+
+      messages:
+        taken: "ont déjà été pris"
+        record_invalid: "La validation a échoué : %{errors}"
+        <<: *errors_messages
+
+      full_messages:
+        format: "%{attribute} %{message}"
+    models:
+      clipboard: Presse-papiers
+      folder: Dossier
+      group: Groupe
+      permission: Permission
+      share_link: Partager le lien
+      user: Utilisateur
+      user_file: Fichier
+
+    attributes:
+      folder:
+        name: Nom
+      group:
+        name: Nom
+      share_link:
+        emails: Addresses e-mail
+        expires_at: Expiration
+      user:
+        email: E-mail
+        name: Nom
+        password: Mot de passe
+      user_file:
+        name: Nom
+        attachment_file_name: Fichier
+
+  # APPLICATION SPECIFIC
+
+  # general
+  back: Retour
+  save: Enregistrer
+  name: Nom
+  email: E-mail
+  submit: Valider
+
+  your_changes_were_saved: Votre modificatrion est enregistrée avec succès.
+  already_deleted: "Désolé, mais le %{type} est déjà supprimé."
+
+  # admins/new
+  create_admin: Création de l'administrateur
+  no_administrator_yet: Boxroom n'a pas encore d'administrateur. Créez-le !
+  create_admin_account: Création du compte administrateur
+  admin_user_created_successfully: Le compte administrateur est à présent créé. Vous pouvez vous enregistrer maintenant.
+
+  # clipboard/_show
+  folder: dossier
+  file: fichier
+  this_folder: ce dossier
+  this_file: ce fichier
+  copy: Copie
+  copy_folder: Copie dossier
+  copy_file: Copie fichier
+  move: Déplacement
+  move_folder: Déplacement dossier
+  move_file: Déplacement fichier
+  are_you_sure: Etes-vous sure ?
+  delete_item: Supprimer
+  remove_from_clipboard: Supprimer du prese-papiers
+  clear_clipboard: Purge du prese-papiers
+
+   # files/edit
+  rename_file: Renommer le fichier
+
+  # files/new
+  select_file: Séléctionner le fichier
+  upload_file: Envoyer un fichier
+  upload: Envoyer
+  exists_already: éxiste déjà
+  
+  #folders/edit
+  rename_folder: Renommer le dossier
+
+  #folders/new
+  new_folder: Nouveau dossier
+
+  #folders/show
+  create_a_new_folder: Créer un nouveau dossier
+  upload_a_file: Envoyer un fichier
+  permissions: Permissions
+  clipboard: Presse-papiers
+  size: Taille
+  date_modified: Date modification
+  up: Revenir
+  edit: Modifier
+  add_to_clipboard: Ajouter au presse-papiers
+  download: Télécharger
+  share: Partager
+
+  #groups/edit
+  rename_group: Renommer le groupe
+
+  #groups/index
+  groups: Groupes
+  create_a_new_group: Créer un nouveau groupe
+
+  #groups/new
+  new_group: Nouveau groupe
+
+  #permissions/form
+  create_permission: Création
+  read_permission: Lecture
+  update_permission: Modification
+  delete_permission: Supression
+  apply_changes_to_subfolders: Appliquer les modifications aux sous-dossiers
+
+  create: création
+  read: lecture
+  update: modification
+  delete: suppression
+
+  #reset_password/edit
+  password: Mot de passe
+  reset_password: Mot de passe oublié !
+  send_email: Envoyer
+
+  #signup/edit
+  sign_up: Connexion
+
+ #sessions
+  username: Utilisateur
+  remember_me: Se souvenir de moi
+  sign_in: Connexion
+
+  #share_links/index
+  unshare: Arrêter le partage
+
+  #share_links/new
+  this_share_link: Lien de partage du fichier
+  share_file: Partager le fichier
+  you_are_about_to_share_the_following_file: Vous partagez les fichiers suivants
+  emails_to_share_with: Adresse e-mail des personnes avec qui vous souhaitez partager le fichier
+  comma_seperated: Séparer par des virgules
+  number_of_charachters: Nombre de caractère
+  link_expires: Expiration
+  tomorrow: Demain
+  three_days_from_now: Dans 3 jours
+  one_week_from_now: Dans une semaine
+  ten_days_from_now: Dans 10 jours
+  two_weeks_from_now: Dans 2 semaines
+  three_weeks_from_now:  Dans 3 semaines
+  one_month_from_now: Dans 1 mois
+  two_months_from_now: Dans 2 mois
+  three_months_from_now: Dans 3 mois
+  half_year_from_now: Dans 6 mois
+  share_link_could_not_be_sent: Le lien de téléchargement ne peut pas être envoyé
+  are_invalid_due_to: "Invalide à cause de %{email}"
+  shared_successfully: Le fichier est partagé avec succès.
+
+  #shared/_header
+  hello: Bonjour
+  settings: Configuration
+  sign_out: Déconnexion
+
+  #shared/_menu
+  folders: Dossiers
+  users: Utilisateurs
+  shared_files: Fichiers partagés
+
+  #users/_form
+  member_of_these_groups: Membre de ce groupe
+  confirm_password: Confirmer le mot de passe
+
+  #users/index
+  create_a_new_user: Création d'un nouvel utilisateur
+  active_users: Utilisateurs actifs
+  invited_users: Utilisateurs invités
+  expiration_date: Date d'expiration
+  extend_expiration_date: Reporter la date d'expiration
+
+  #users/new
+  new_user: Nouvel utilisateur
+
+ #admins/controller
+  admin_user_created_sucessfully: L'administrateur est créé avec succès ! Vous pouvez vous connecter.
+
+  #application_controller
+  no_permissions_for_this_type: "Vous n'avez pas %{method} permission pour %{type}."
+
+  # clipboard_controller
+  added_to_clipboard: Ajouté au presse-papiers avec succès.
+  could_not_copy: "Copie impossible. Le %{type} avec le même nom existe déjà."
+  could_not_move: "Déplacement impossible. Le %{type} avec le même nom existe déjà."
+  cannot_move_to_own_subfolder: Vous ne pouvez pas déplacer le dossier dans un sous-dossier.
+
+  # folders_controller
+  cannot_delete_root_folder: Le dossier "root" ne peut pas être renommé ou supprimé.
+  no_delete_permissions_for_subfolder: Vous n'avez pas la permission pour la suppresion d'un sous-dossier.
+
+  # groups_controller
+  group_already_deleted: Quelqu'un à supprimé ce groupe. Votre action est donc annulée.
+  admins_group_cannot_be_deleted: Le groupe "admin" ne peut pas être renommé ou supprimé.
+
+  # reset_password_controller
+  instruction_email_sent: "Les instructions sont envoyés à %{email} (s'il existe dans notre système)."
+  password_reset_successfully: Votre mot de passe à été réinitialisé avec succès. Vous pouvez maintenant vous connecter.
+  reset_url_expired: l'URL de réinitialisation du mot de passe à expiré for resetting your password expired. Please try again.
+
+  # signup_controller
+  signed_up_successfully: Votre compte à été créé avec succès ! Vous pouvez maintenant vous connecter.
+  sign_url_expired: L'URL d'enregistrement à expirée ! Merci de contacter votre administrateur.
+
+  # sessions_controller
+  credentials_incorrect: Votre nom d'utilisateur et/ou votre mot de passe est incorrect. Veuillez réessayer.
+
+  # users_controller
+  user_already_deleted: Quelqu'un à supprimer l'utilisateur ! Votre action est annulée.
+  admin_user_cannot_be_deleted: Le compte Administrateur ne peut pas être supprimé.
+  edit_user: Modification de l'utilisateur
+  account_settings: Configuration du compte
+
+  # mailers/user_mailer
+  signup_email_subject: "[Boxroom] Invitation d'enregistrement"
+  reset_password_email_subject: '[Boxroom] Instructions de réinitialisation du mot de passe'
+  share_link_email_subject: "[Boxroom] Quelqu'un a partagé un fichier avec vous"
